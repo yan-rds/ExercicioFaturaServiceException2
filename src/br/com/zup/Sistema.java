@@ -18,11 +18,11 @@ public class Sistema {
         return Service_Consumidor.cadastrarConsumidor(nome, email, tipoPessoa);
     }
 
-    public static Fatura cadastrarFatura(){
+    public static Fatura cadastrarFatura() throws Exception{
        String email = capturarDados("insira o email do consumidor à ter essa fatura cadastrada").nextLine();
        double valor = capturarDados("Qual é o valor desta fatura?").nextDouble();
        String dataDeVencimento = capturarDados("Qual é a data de vencimento deste fatura?").nextLine();
-
+       return Service_Fatura.cadastrarFatura(email,valor,dataDeVencimento);
     }
 
 }
