@@ -59,7 +59,7 @@ public class Sistema {
         }
     }
 
-    public static void tratarExcecao () {
+    public static void tratarExcecoes() {
         while (loopMenu) {
             try {
                 executarSistema();

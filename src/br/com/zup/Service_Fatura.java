@@ -13,11 +13,12 @@ public class Service_Fatura {
         return novaFatura;
     }
 
-    public static void pesquisarFaturaPorEmail (String email){
+    public static void pesquisarFaturaPorEmail (String email) throws Exception{
         for (Fatura referencia : listaDeFatura){
             if (referencia.getConsumidor().getEmail().equalsIgnoreCase(email)){
                 System.out.println(referencia);
             }
         }
+        throw new Exception("Não existe um consumidor com este email");
     }
 }
