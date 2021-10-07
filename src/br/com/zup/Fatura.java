@@ -41,7 +41,7 @@ public class Fatura {
     @Override
     public String toString() {
         StringBuilder concatenador = new StringBuilder();
-        concatenador.append("\n\t\tDados da Fatura");
+        concatenador.append("\n\tDados da Fatura");
         concatenador.append("\nConsumidor: " + consumidor);
         concatenador.append("\nValor: " + valor);
         concatenador.append("\nData de Vencimendo: " + dataDeVencimento);

@@ -12,4 +12,12 @@ public class Service_Fatura {
         listaDeFatura.add(novaFatura);
         return novaFatura;
     }
+
+    public static void pesquisarFaturaPorEmail (String email){
+        for (Fatura referencia : listaDeFatura){
+            if (referencia.getConsumidor().getEmail().equalsIgnoreCase(email)){
+                System.out.println(referencia);
+            }
+        }
+    }
 }

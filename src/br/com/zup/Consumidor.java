@@ -41,7 +41,7 @@ public class Consumidor {
     @Override
     public String toString() {
         StringBuilder concatenador = new StringBuilder();
-        concatenador.append("\tNome: " + nome);
+        concatenador.append(nome);
         concatenador.append("\tEmail: " + email);
         concatenador.append("\tPessoa " + tipoPessoa);
         return concatenador.toString();

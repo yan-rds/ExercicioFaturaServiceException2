@@ -27,4 +27,10 @@ public class Sistema {
        return Service_Fatura.cadastrarFatura(email,valor,dataDeVencimento);
     }
 
+    public static void pesquisarFaturaPorEmail() throws Exception{
+        String email = capturarDados("Qual é o email do consumidor?").nextLine();
+        Service_Consumidor.verificarEmailValido(email);
+        Service_Fatura.pesquisarFaturaPorEmail(email);
+    }
+
 }
