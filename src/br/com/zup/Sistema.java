@@ -13,6 +13,8 @@ public class Sistema {
     public static Consumidor cadastrarConsumidor() throws Exception{
         String nome = capturarDados("Qual é o nome do consumidor?").nextLine();
         String email = capturarDados("Qual é o email deste consumidor?").nextLine();
+        Service_Consumidor.verificarEmailRepetido(email);
+        Service_Consumidor.verificarEmailValido(email);
         Service_Consumidor.ExibirTiposPessoa();
         String tipoPessoa = capturarDados("Digite o tipo de pessoa").nextLine();
         return Service_Consumidor.cadastrarConsumidor(nome, email, tipoPessoa);

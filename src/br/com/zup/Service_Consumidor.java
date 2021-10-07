@@ -28,13 +28,27 @@ public class Service_Consumidor {
         throw new Exception("Tipo de pessoa inserido inválido");
     }
 
-    public static Consumidor validarEmail(String email) throws Exception{
+    public static Consumidor VerificarSeEmailExiste(String email) throws Exception{
         for (Consumidor referencia : listaDeConsumidor){
             if (referencia.getEmail().equalsIgnoreCase(email)){
                 return referencia;
             }
         }
         throw new Exception("Não existe um consumidor com este email");
+    }
+
+    public static void verificarEmailRepetido(String email) throws Exception{
+        for (Consumidor referencia : listaDeConsumidor){
+            if (referencia.getEmail().equalsIgnoreCase(email)){
+                throw new Exception("Consumidor com este email já existe");
+            }
+        }
+    }
+
+    public static void verificarEmailValido(String email) throws Exception{
+        if (!email.contains("@")){
+            throw new Exception("Email inválido");
+        }
     }
 
 
