@@ -28,4 +28,13 @@ public class Service_Consumidor {
         throw new Exception("Tipo de pessoa inserido inválido");
     }
 
+    public static Consumidor validarEmail(String email) throws Exception{
+        for (Consumidor referencia : listaDeConsumidor){
+            if (referencia.getEmail().equalsIgnoreCase(email)){
+                return referencia;
+            }
+        }
+        throw new Exception("Não existe um consumidor com este email");
+    }
+
 }
